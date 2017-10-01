@@ -1,123 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>To-do App</title>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script type="text/javascript">
+  .no-gutters {
+margin-right: 0;
+margin-left: 0;
+
+> .col,
+> [class*="col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+}
+  </script>
 </head>
-<body style="background-image:url(background.JPG)">
+<body>
+
+<div class="container">
+
+ <!-- Main container of Todo App layout -->
+ <div class="row no-gutters">
+   <div class="col-sm-12 col-md-4 col-lg-4" style="background-color:green;">
+     <div class="row">
+
+         <div class="col-md-2">
+           <i class="glyphicon glyphicon-menu-hamburger"></i>
+         </div>
+         <div class="col-md-8">
+           <input type="text">
+         </div>
+         <div class="col-md-2">
+           <i class="glyphicon glyphicon-search"></i>
+         </div>
 
 
-  <div class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left" style="display:none" id="mySidebar">
-    <button class="w3-bar-item w3-button w3-large"
-    onclick="w3_close()">&#9776; ________________<i class="material-icons">search</i> </button>
-    <a href="#" onclick="InboxFunction()" class="w3-bar-item w3-button">Inbox</a>
-    <a href="#" onclick="GroceriesFunction()" class="w3-bar-item w3-button">Groceries</a>
-    <a href="#" onclick="MovieFunction()" class="w3-bar-item w3-button">Movies to watch</a>
-    <a href="#" onclick="TravelFunction()" class="w3-bar-item w3-button">Travel</a>
-    <a href="#" onclick="WorkFunction()" class="w3-bar-item w3-button">Work</a>
-    <a href="#" onclick="FamilyFunction()" class="w3-bar-item w3-button">Family</a>
-  </div>
-
-  <div zclass="w3-main" id="main">
-
-  <div class="w3-teal">
-    <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
-    <div class="w3-container">
-      <h1 id = "Head">To-do App</h1>
-    </div>
-    ___________________________________________________________________________________________________________
-    <div class="w3-dropdown-hover">
-      <button class="w3-button">. . . More</button>
-      <div class="w3-dropdown-content w3-bar-block w3-border">
-        <a href="#" class="w3-bar-item w3-button">Duplicate List</a>
-        <a href="#" class="w3-bar-item w3-button">Email List</a>
-        <a href="#" class="w3-bar-item w3-button">Print List</a>
+     </div>
+   </div>
+   <div class="col-sm-12 col-md-8 col-lg-8" style="background-color:lightgreen;">
+     <div class="row">
+       <div class="col-md-10">
+         <p>Inbox</p>
+       </div>
+      <div class="col-md-2">
+        <i class="glyphicon glyphicon-share"></i>
+        <i class="glyphicon glyphicon-sort"></i>
+        <i class="glyphicon glyphicon-option-horizontal"></i>
       </div>
-    </div>
-  <a href="#" class="w3-bar-item w3-button" onclick="home()"> <i class="material-icons">home</i> </a>
+     </div>
+
+   </div>
+ </div>
+  <div class="row">
+    <!-- Left bar -->
+    <div class="col-sm-1 col-md-4 col-lg-4" style="background-color:yellow;">
+
+      <div class="row">
+        <div class="col-md-2">
+          <i class="glyphicon glyphicon-user"></i>
+        </div>
+        <div class="col-md-10">
+          <p>Osama Sarfraz</p>
+        </div>
+      </div>
+        <div class="row">
+          <div class="col-md-2">
+            <i class="glyphicon glyphicon-th-list"></i>
+          </div>
+          <div class="col-md-10">
+            <p>Inbox</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <i class="glyphicon glyphicon-th-list"></i>
+          </div>
+          <div class="col-md-10">
+            <p>Groceries</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <i class="glyphicon glyphicon-th-list"></i>
+          </div>
+          <div class="col-md-10">
+            <p>Movies to Watch</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <i class="glyphicon glyphicon-th-list"></i>
+          </div>
+          <div class="col-md-10">
+            <p>Travel</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <i class="glyphicon glyphicon-th-list"></i>
+          </div>
+          <div class="col-md-10">
+            <p>Work</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <i class="glyphicon glyphicon-th-list"></i>
+          </div>
+          <div class="col-md-10">
+            <p>Family</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <i class="glyphicon glyphicon-th-list"></i>
+          </div>
+          <div class="col-md-10">
+            <p>Private</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+          </div>
+
+        </div>
+
+        <div class="row align-items-end">
+  <div class="col-md-2">
+    <i class="glyphicon glyphicon-plus"></i>
   </div>
-
-  <img src="img_car.jpg" alt="" style="width:100%">
-
-  <div class="w3-container">
-
-    <div class="row">
-      <div class="col-md-12" style="background-color:Green;">
-        <font color = "White">
-<h1 id = "msg">Welcome! Click on menu on upper left corner for options</h1>
-</font>
-<div id = "addtext">
+  <div class="col-md-10">
+    <p>Create List</p>
+  </div>
 
 </div>
+    </div>
+    <!-- Right bar -->
+    <div class="col-sm-11 col-md-8 col-lg-8" style="background-color:pink;">
+      <!-- This column furhter divide into two Rows 1. Add to do & 2. List down todos -->
+      <div class="row">
+        <br>
+        <br>
+        <br>
+        <div class="col-md-12" >
+            <div class="row">
+              <!-- Added form to add tasks -->
+
+
+                 <div class="col-md-12">
+                  <form>
+                   <div class="input-group">
+                     <span class="input-group-addon"><i class="glyphicon glyphicon-plus"></i></i></span>
+                     <input id="add" type="text" class="form-control" name="add" placeholder="Add a to-do">
+                   </div>
+
+                 </form>
+                 </div>
+
+
+
+                <br>
+
+            </div>
+        </div>
       </div>
-  </div>
+      <div class="row">
+       <div class="col-md-12" style="background-color:white;">
+         <ul>
+            <li><input type="checkbox"></input><span>Coffee</span></li>
+            <br>
+            <li><input type="checkbox"></input><span>Tea</span></li>
+            <br>
+            <li><input type="checkbox"></input><span>Milk</span></li>
+          </ul>
+
+       </div>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+      </div>
+    </div>
 
   </div>
+</div>
 
-  <script>
-
-  function w3_open() {
-    document.getElementById("main").style.marginLeft = "25%";
-    document.getElementById("mySidebar").style.width = "25%";
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("openNav").style.display = 'none';
-  }
-  function w3_close() {
-    document.getElementById("main").style.marginLeft = "0%";
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("openNav").style.display = "inline-block";
-  }
-function home() {
-  document.getElementById("Head").innerHTML = "To-do App";
-  document.getElementById("msg").innerHTML = "Welcome! Click on menu on upper left corner for options";
-}
-
-  function InboxFunction() {
-
-
-      document.getElementById("Head").innerHTML = "Inbox";
-      document.getElementById("msg").innerHTML = "Add Whom to Inbox";
-      var input = document.createElement("Input");
-      var inputElement = document.getElementById("addtext");
-      inputElement.appendChild(input);
-
-      var para = document.createElement("p");
-      var node = document.createTextNode("Press Enter");
-      para.appendChild(node);
-
-      var element = document.getElementById("addtext");
-      element.appendChild(para);
-  }
-
-  function GroceriesFunction() {
-      document.getElementById("Head").innerHTML = "Groceries";
-      document.getElementById("msg").innerHTML = "Add Groceries needed";
-}
-      function MovieFunction() {
-          document.getElementById("Head").innerHTML = "Movies to Watch";
-          document.getElementById("msg").innerHTML = "Add Movies";
-      }
-
-      function TravelFunction() {
-          document.getElementById("Head").innerHTML = "Travel";
-          document.getElementById("msg").innerHTML = "Places to Travel";
-      }
-      function WorkFunction() {
-          document.getElementById("Head").innerHTML = "Work";
-          document.getElementById("msg").innerHTML = "Work To do";
-      }
-      function FamilyFunction() {
-          document.getElementById("Head").innerHTML = "Family";
-          document.getElementById("msg").innerHTML = "Family Work to do";
-      }
-
-
-  </script>
 </body>
 </html>
