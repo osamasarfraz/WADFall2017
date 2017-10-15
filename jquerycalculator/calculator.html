@@ -1,0 +1,142 @@
+<html>
+<head>
+ <title>Simple Calculator</title>
+ <link rel="stylesheet" type="text/css" href="style.css">
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="bootstrap-grid.css">
+
+
+<script type="text/javascript">
+
+
+$(document).ready(function(){
+
+//Addition
+
+$("#add").click(function(){
+  var a = $("#cal1").val();
+  var b = $("#cal2").val();
+  var result = (+a + +b);
+  $("#result").val(result);
+ });
+
+//Subtraction
+ $("#sub").click(function(){
+  var a = $("#cal1").val();
+   var b = $("#cal2").val();
+   var result = (+a - +b);
+  $("#result").val(result);
+ });
+
+//Multiplication
+ $("#mul").click(function(){
+  var a = $("#cal1").val();
+  var b = $("#cal2").val();
+  var result = (+a * +b);
+  $("#result").val(result);
+ });
+
+//Division
+ $("#divsion").click(function(){
+  var a = $("#cal1").val();
+   var b = $("#cal2").val();
+   var result = (+a / +b);
+   $("#result").val(result);
+ });
+
+// Reset Values
+ $("#reset").click(function(){
+       $("#cal1").val("");
+       $("#cal2").val("");
+       $("#result").val("");
+ });
+});
+
+</script>
+<body>
+
+<div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12" style="background-color:lightblue">
+        <h2> Simple Calculator</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12" style="background-color:yellow">
+        <p><b>Instruction:</b>Enter numbers in first and second textbox, press any button below, then see the result in result textbox</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+
+      </div>
+      <div class="col-md-4" style="background-color:lightgreen">
+        <div class="row">
+          <div class="col-md-3">
+            Enter Number:
+          </div>
+          <div class="col-md-9">
+          <input type = "text" id = "cal1">
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-3">
+            Enter Number:
+          </div>
+          <div class="col-md-9">
+          <input type = "text" id = "cal2">
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-3">
+            Result:
+          </div>
+          <div class="col-md-9">
+          <input type = "text" id = "result">
+          </div>
+        </div>
+        <br><br><br>
+        <div class="row">
+          <div class="col-md-3 col-md-offset-4">
+            <button type = "button" class="btn btn-info btn-lg" id ="add">Add</button>&nbsp;&nbsp;&nbsp;
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 col-md-offset-4">
+            <button type = "button" class="btn btn-info btn-lg" id ="sub">Subtract</button>&nbsp;&nbsp;&nbsp;
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 col-md-offset-4">
+          <button type = "button" class="btn btn-info btn-lg" id ="mul">Multiply</button>&nbsp;&nbsp;&nbsp;
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 col-md-offset-4">
+            <button type = "button" class="btn btn-info btn-lg" id ="divsion">Division</button>&nbsp;&nbsp;&nbsp;
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 col-md-offset-4">
+          <button type = "button" class="btn btn-danger btn-lg" id ="reset">Reset</button>
+          </div>
+        </div>
+
+
+
+      </div>
+      <div class="col-md-4">
+
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
