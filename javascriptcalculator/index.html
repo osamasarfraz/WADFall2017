@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="bootstrap-grid.css">
+    <script src="assets/js/vendor/popper.min.js"></script>
+
+
+
+  </head>
+  <body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12" style="background-color:lightblue">
+      <h1>SIMPLE CALCULATOR</h1>
+    </div>
+
+
+  </div>
+  <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4" style="background-color:lightgreen"><h1>Calculator</h1>
+            <div class="row" id="result">
+<form name="calc">
+   <label>Result: </label><input id="calc" type="text" class="screen text-right" name="result" readonly>
+</form>
+
+
+   </div>
+
+
+            <div class="row">
+              <div class="col-md-3">
+               <h1><button id="allClear" type="button" class="btn btn-danger" onclick="clearScreen()">AC</button></h1>
+
+              </div>
+              <div class="col-md-3">
+                <h1> <button id="clear" type="button" class="btn btn-warning" onclick="clearScreen()">CE</button></h1>
+
+              </div>
+              <div class="col-md-3">
+                <h1><button id="%" type="button" class="btn btn-info" onclick="myFunction(this.id)">%</button></h1>
+              </div>
+              <div class="col-md-3">
+                <h1><button id="/" type="button" class="btn btn-info" onclick="myFunction(this.id)">÷</button></h1>
+
+
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <h1><input id="7" type="button" name="" value="7" onclick="myFunction(this.id)"></h1>
+              </div>
+              <div class="col-md-3">
+                <h1><input id="8" type="button" name="" value="8" onclick="myFunction(this.id)"></h1>
+              </div>
+              <div class="col-md-3">
+                <h1><input id="9" type="button" name="" value="9" onclick="myFunction(this.id)"></h1>
+              </div>
+              <div class="col-md-3">
+                <h1><button id="*" type="button" class="btn btn-info" onclick="myFunction(this.id)">x</button></h1>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <h1><button id="4" type="button" onclick="myFunction(this.id)">4</button></h1>
+              </div>
+              <div class="col-md-3">
+                <h1><input id="5" type="button" name="" value="5" onclick="myFunction(this.id)"></h1>
+              </div>
+              <div class="col-md-3">
+                <h1><input id="6" type="button" name="" value="6" onclick="myFunction(this.id)"></h1>
+              </div>
+              <div class="col-md-3">
+                <h1><button id="-" type="button" class="btn btn-info" onclick="myFunction(this.id)">-</button></h1>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <h1><button id="1" type="button" name="button" onclick="myFunction(this.id)">1</button></h1>
+              </div>
+              <div class="col-md-3">
+                <h1><input id="2" type="button" name="" value="2" onclick="myFunction(this.id)"></h1>
+              </div>
+              <div class="col-md-3">
+                <h1><input id="3" type="button" name="" value="3" onclick="myFunction(this.id)"></h1>
+              </div>
+              <div class="col-md-3">
+                <h1><button id="+" type="button" class="btn btn-info" onclick="myFunction(this.id)">+</button></h1>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <h1></h1>
+              </div>
+              <div class="col-md-3">
+                <h1><input id="0" type="button" name="" value="0" onclick="myFunction(this.id)"></h1>
+              </div>
+              <div class="col-md-3">
+                <h1><input id="." type="button" name="" value="." onclick="myFunction(this.id)"></h1>
+              </div>
+              <div class="col-md-3">
+                <h1><button id="equals" type="button" class="btn btn-success" onclick="calculate()">=</button></h1>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-md-4"></div>
+        </div>
+
+</div>
+<script>
+
+
+function myFunction(id) {
+  document.calc.result.value+=id;
+}
+
+// Clears calculator input screen
+function clearScreen() {
+  document.calc.result.value="";
+}
+
+// Calculates input values
+function calculate() {
+  try {
+    var input = eval(document.calc.result.value);
+    document.calc.result.value=input;
+  } catch(err){
+      document.calc.result.value="Error";
+    }
+}
+
+</script>
+<script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
