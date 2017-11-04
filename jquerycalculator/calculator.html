@@ -56,7 +56,7 @@ $("#add").click(function(){
 });
 
 </script>
-<body>
+<body style="background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9GN0B9l4VVL1aRq86-qHZNdVgp8SxmEHgeSM8hRg8zaxeAbjA)">
 
 <div>
   <div class="container">
@@ -66,41 +66,42 @@ $("#add").click(function(){
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12" style="background-color:yellow">
-        <p><b>Instruction:</b>Enter numbers in first and second textbox, press any button below, then see the result in result textbox</p>
+      <div class="col-md-12" style="background-color:plum">
+        <p> Please Enter numbers in first and second textbox, press any button below, then see the result in result textbox</p>
       </div>
     </div>
-    <div class="row">
+    <div class="row"style="background-color:antiquewhite">
       <div class="col-md-4">
+          <div class="row">
+              <div class="col-md-3" >
+                Enter Number:
+              </div>
+              <div class="col-md-9">
+              <input type = "text" id = "cal1">
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-md-3">
+                Enter Number:
+              </div>
+              <div class="col-md-9">
+              <input type = "text" id = "cal2">
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-md-3">
+                Result:
+              </div>
+              <div class="col-md-9">
+              <input type = "text" id = "result">
+              </div>
+            </div>
 
       </div>
-      <div class="col-md-4" style="background-color:lightgreen">
-        <div class="row">
-          <div class="col-md-3">
-            Enter Number:
-          </div>
-          <div class="col-md-9">
-          <input type = "text" id = "cal1">
-          </div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col-md-3">
-            Enter Number:
-          </div>
-          <div class="col-md-9">
-          <input type = "text" id = "cal2">
-          </div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col-md-3">
-            Result:
-          </div>
-          <div class="col-md-9">
-          <input type = "text" id = "result">
-          </div>
-        </div>
+      <div class="col-md-4" style="background-color:mediumpurple">
+        
         <br><br><br>
         <div class="row">
           <div class="col-md-3 col-md-offset-4">
@@ -122,16 +123,17 @@ $("#add").click(function(){
             <button type = "button" class="btn btn-info btn-lg" id ="divsion">Division</button>&nbsp;&nbsp;&nbsp;
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-3 col-md-offset-4">
-          <button type = "button" class="btn btn-danger btn-lg" id ="reset">Reset</button>
-          </div>
-        </div>
+        
 
 
 
       </div>
       <div class="col-md-4">
+          <div class="row">
+              <div class="col-md-3 col-md-offset-4">
+              <button type = "button" class="btn btn-danger btn-lg" id ="reset">Reset</button>
+              </div>
+            </div>
 
       </div>
     </div>
